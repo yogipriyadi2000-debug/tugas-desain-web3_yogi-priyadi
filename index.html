@@ -1,0 +1,96 @@
+<html>
+<head><title>Latihan Modul 3</title></head>
+<body bgcolor="lightblue">
+<script language="JavaScript">
+<!--
+function kirim()
+{
+ // mengambil data dari objek text
+ var nimstr = document.fform.nim.value;
+ var namastr = document.fform.nama.value;
+
+ // mengambil data dari objek select
+ var jkstr = document.fform.jk.value;
+ var agamastr = document.fform.agama.value;
+ var jurusanstr = document.fform.jurusan.value;
+
+ // mengambil data dari objek radio (properti checked)
+ var statusstr = "";
+ if (document.fform.status.checked == true)
+ {
+  statusstr = "Kawin";
+ }
+ else
+ {
+  statusstr = "Tidak Kawin";
+ }
+
+ // mengambil data dari objek textarea
+ var komentarstr = document.fform.komentar.value;
+
+ // menampilkan ke bagian output
+ document.fform.onim.value = nimstr;
+ document.fform.onama.value = namastr;
+ document.fform.ojk.value = jkstr;
+ document.fform.oagama.value = agamastr;
+ document.fform.ostatus.value = statusstr;
+ document.fform.ojurusan.value = jurusanstr;
+ document.fform.okomentar.value = komentarstr;
+}
+//-->
+</script>
+
+<form name="fform">
+<center>
+<H3>Data Mahasiswa</H3>
+<H3>Universitas Komputer Indonesia</H3>
+<HR WIDTH=600 COLOR=Black>
+</center>
+
+<PRE>
+NIM               : <input type="text" size="11" name="nim" value="10000000">
+Nama Mahasiswa    : <input type="text" size="25" name="nama" value="Nama Anda">
+Jenis Kelamin     : <select name="jk" size="1">
+                     <option value="Laki-laki"> Laki-laki </option>
+                     <option value="Perempuan"> Perempuan </option>
+                    </select>
+Agama             : <select name="agama" size="1">
+                     <option value="Islam"> Islam </option>
+                     <option value="Kristen"> Kristen </option>
+                     <option value="Katolik"> Katolik </option>
+                     <option value="Hindu"> Hindu </option>
+                     <option value="Budha"> Budha </option>
+                    </select>
+Status            : <input type="radio" value="kawin" name="status">Kawin
+Jurusan Di UNIKOM : <select name="jurusan" size="1">
+                     <option value="Teknik Informatika"> Teknik Informatika </option>
+                     <option value="Manajemen Informatika"> Manajemen Informatika </option>
+                     <option value="Teknik Komputer"> Teknik Komputer </option>
+                     <option value="Teknik Industri"> Teknik Industri </option>
+                     <option value="Teknik Elektro"> Teknik Elektro </option>
+                     <option value="Teknik Sipil"> Teknik Sipil </option>
+                     <option value="Teknik Arsitektur"> Teknik Arsitektur </option>
+                     <option value="Perencanaan Wil. Kota"> Perencanaan Wil. Kota </option>
+                    </select>
+Komentar          : <textarea name="komentar" rows="3" cols="40">Hai...aku senang bisa kuliah di jurusan teknik informatika, bagaimana dengan kamu?????</textarea>
+</PRE>
+
+<center>
+<input type="button" value="kirim" onclick="kirim()">
+<input type="reset" value="ulang">
+</center>
+<BR>
+
+<H4><U>Data Mahasiswa Universitas Komputer Indonesia</U></H4>
+<PRE>
+NIM               : <input type="text" size="11" name="onim">
+Nama Mahasiswa    : <input type="text" size="25" name="onama">
+Jenis Kelamin     : <input type="text" size="15" name="ojk">
+Agama             : <input type="text" size="15" name="oagama">
+Status            : <input type="text" size="15" name="ostatus">
+Jurusan           : <input type="text" size="25" name="ojurusan">
+Komentar          : <textarea name="okomentar" rows="3" cols="40"></textarea>
+</PRE>
+</form>
+</body>
+</html>
